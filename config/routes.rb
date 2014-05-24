@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :messages do
+    member do
+       get 'borrowrequest'
+    end
+  end
+
+  resources :groups do 
+    member do
+      post 'join'
+    end
+  end
+
+  resources :stuffs
+
   get 'sessions/new'
 
   get 'users/new'

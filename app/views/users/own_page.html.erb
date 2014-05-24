@@ -1,4 +1,31 @@
 <div class="all">
-<h2>User view (tänne haku ja kaikki tämmönen...)</h2>
+<h2>Welcome</h2>
 <%= link_to "My profile", user_path(current_user), :class=> "btn btn-primary" %> 
+<%= link_to "Add new stuff", new_stuff_path, :class=> "btn btn-primary" %> 
+<%= link_to "Create new group", new_group_path, :class=> "btn btn-primary" %> 
+
 </div>
+
+<div class="col-md-4">
+  <h2>Groups</h2>
+
+  <% @current_user.groups.each do |f| %>
+
+  <div class="box" style="float:left;"><%= link_to f.name, group_path(f), :class=> "btn btn-primary" %> </div>
+
+  <% end %>
+  <%= link_to "All groups", groups_path, :class=> "btn btn-mini" %>
+
+</div>
+    
+    <div class="col-md-4">
+    <h2>My stuffs</h2>
+
+    <% @current_user.stuffs.each do |f| %>
+
+    <%= link_to f.name, stuff_path(f), :class=> "btn btn-primary" %> 
+
+    <% end %>
+    </div>
+
+

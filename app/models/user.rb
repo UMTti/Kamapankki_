@@ -4,7 +4,11 @@ class User < ActiveRecord::Base
   
   attr_accessor :password
   before_save :encrypt_password
-  
+  #belongs_to :group
+  has_many :stuffs
+  has_and_belongs_to_many :groups
+  has_many :messages
+
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
   validates_presence_of :email
