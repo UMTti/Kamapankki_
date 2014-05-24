@@ -1,28 +1,25 @@
-== README
+<h1>Kamapankki - a place where users can create "common households"</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Our target user is a single about 20 years old woman or man student, who lives in the big city. He/She tries to live according to ecologic standards and wants to own as little as possible. His/her hobbies are student activities and different kind of sports like climbing. 
+</be>
+1. Our main character is using the solution, because he/she:
 
-Things you may want to cover:
+<li>
 
-* Ruby version
+<ul>Knows that producing new items consume natural resources often without a real purpose</ul>
+<ul>Don't want to buy everything by himself, because students haven't much money</ul>
+<ul>Have many close communities and friends and wants to try exciting things with them</ul>
 
-* System dependencies
+</li>
 
-* Configuration
+2. First user joins to groups close his/her, for examble the group of his/her living floor in the student apartment building. Then he/she thinks what items he/she have that the others may not have and what they maybe wants to borrow. For example the interesting book related to gamification. When user joins to the group, all his/her items joins also to the group and anyone in the group can send a borrow request. 
 
-* Database creation
+</br>
 
-* Database initialization
+3. Users can use it everywhere: it's near like in user's own home, he/she just can go to take the item from the member of the group by sending a borrow request and getting an answer to it. 
+</br>
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. People don't need to buy everything to themselves when they move from childhood home to the own apartment. Also the consumption of natural resources decreases. People will feel more togerthness and create local communities. 
+</br>
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
