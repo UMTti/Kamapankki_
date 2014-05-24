@@ -1,9 +1,14 @@
 <div class="all">
-<h2>Welcome</h2>
-<%= link_to "My profile", user_path(current_user), :class=> "btn btn-primary" %> 
-<%= link_to "Add new stuff", new_stuff_path, :class=> "btn btn-primary" %> 
-<%= link_to "Create new group", new_group_path, :class=> "btn btn-primary" %> 
+<div class="row">
 
+<div class="col-md-6">
+<h2>Welcome</h2>
+</div>
+<div class="col-md-6">
+<%= link_to "My profile", user_path(current_user), :class=> "btn btn-primary pull-right", :style => "margin-right:10px;" %> 
+</div>
+
+</div>
 </div>
 
 <div class="col-md-4">
@@ -11,10 +16,11 @@
 
   <% @current_user.groups.each do |f| %>
 
-  <div class="box" style="float:left;"><%= link_to f.name, group_path(f), :class=> "btn btn-primary" %> </div>
+  <div class="box" style="float:left;"><%= link_to f.name, group_path(f), :class=> "btn btn-warning" %> </div>
 
   <% end %>
   <%= link_to "All groups", groups_path, :class=> "btn btn-mini" %>
+  <%= link_to "Create new group", new_group_path, :class=> "btn btn-mini" %>
 
 </div>
     
@@ -23,9 +29,23 @@
 
     <% @current_user.stuffs.each do |f| %>
 
-    <%= link_to f.name, stuff_path(f), :class=> "btn btn-primary" %> 
+    <%= link_to f.name, stuff_path(f), :class=> "btn btn-warning" %> 
 
     <% end %>
+    <%= link_to "Add new stuff", new_stuff_path, :class=> "btn btn-mini" %> 
+    </div>
+
+    <div class="col-md-4">
+    	<h2>Messages</h2>
+        <% @current_user.messages.each do |m| %>
+            <% @se = User.find_by_id(m.sender_id) %>
+            <%= link_to @se.name, user_path(@se) %> wants to borrow 
+            <% @s = Stuff.find_by_id(m.stuff_id) %>
+            <% if @s != nil %>
+            <%= @s.name %>
+            <% end %>
+        </br>
+        <% end %>
     </div>
 
 

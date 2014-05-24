@@ -1,0 +1,23 @@
+<p id="notice"></p>
+
+<h1> <%= @stuff.name %> </h1>
+Owner: <%= @stuff.user.name %>
+
+<div class="box">
+Status: 
+<% if @stuff.borrowed == false %>
+Free to be borrowed!
+<% else %>
+Borrowed
+<% end %>
+</div>
+
+<%if @stuff.borrowed == false %>
+    <%= link_to "Make borrow request", borrowrequest_stuff_path(@stuff), :class=> "btn btn-primary" %> 
+<% end %>
+
+<% if current_user == @stuff.user %>
+</br>
+</br>
+<%= link_to 'Edit', edit_stuff_path(@stuff) %>
+<% end %>

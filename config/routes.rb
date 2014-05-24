@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  resources :messages do
-    member do
-       get 'borrowrequest'
-    end
-  end
+  resources :messages 
 
   resources :groups do 
     member do
@@ -11,7 +7,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :stuffs
+  resources :stuffs do
+    member do
+       get 'borrowrequest'
+    end
+  end
 
   get 'sessions/new'
 

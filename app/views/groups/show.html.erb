@@ -1,0 +1,30 @@
+<div class="all">
+<p id="notice"></p>
+
+<h1> <%= @group.name %> </h1>
+
+<%= @group.description %> 
+
+<% if not @group.users.include?(current_user) %>
+    <%= link_to "Join", join_group_path(@group), :class=> "btn btn-primary", :method => "post" %>
+<% end %>
+
+<div class="row">
+<div class="col-md-4">
+  <h2>Members</h2>
+  <% @group.users.each do |f| %>
+  <%= link_to f.name, user_path(f), :class=> "btn btn-primary" %> 
+  <% end %>
+</div>
+
+<div class="col-md-4">
+<h2>Stuffs</h2>
+  <% @group.users.each do |f| %>
+  <% f.stuffs.each do |s| %>
+      <%= link_to s.name, stuff_path(s), :class=> "btn btn-warning" %>
+  <% end %> 
+  <% end %>
+</div>
+</div>
+
+</div>

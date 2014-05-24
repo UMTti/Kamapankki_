@@ -1,0 +1,9 @@
+<h1>All groups</h1>
+
+<div class="col-md-9">
+    <% @groups.each do |g| %>
+        <%= link_to g.name, group_path(g), :class=> "btn btn-warning" %> 
+    <% end %>
+</div>
+
+
