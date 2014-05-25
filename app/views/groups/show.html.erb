@@ -9,11 +9,31 @@
     <%= link_to "Join", join_group_path(@group), :class=> "btn btn-primary", :method => "post" %>
 <% end %>
 
+ <%= link_to "Write message", groupmessage_group_path(@group), :class=> "btn btn-primary" %> 
+
+</br>
+<% @group.messages.each do |m| %>
+
+<% if m.content != nil && m.content != "" %>
+<div style="background-color: #f0ad4e;width:70%;">
+<%= m.title %>.
+<%= m.content %>
+
+<% @u = User.find_by_id(m.sender_id) %>
+<%= @u.name %> 
+
+</div>
+
+
+<% end %>
+
+<% end %>
+
 <div class="row">
 <div class="col-md-4">
   <h2>Members</h2>
   <% @group.users.each do |f| %>
-  <%= link_to f.name, user_path(f), :class=> "btn btn-primary" %> 
+  <%= link_to f.name, user_path(f), :class=> "btn btn-warning" %> 
   <% end %>
 </div>
 
@@ -28,3 +48,18 @@
 </div>
 
 </div>
+
+<script>
+
+$('a[data-remote=true]').live('ajax:before', function () {
+   if ($(this).attr('ajax-loading')) {
+     return false;
+   } else {
+     $(this).attr('ajax-loading', true);
+   }
+}).live('ajax:complete', function () {
+  $(this).removeAttr('ajax-loading');
+});
+
+
+</script>

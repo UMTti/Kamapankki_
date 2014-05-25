@@ -39,7 +39,7 @@
     	<h2>Messages</h2>
         <% @current_user.messages.each do |m| %>
             <% @se = User.find_by_id(m.sender_id) %>
-            <%= link_to @se.name, user_path(@se) %> wants to borrow 
+            <%= link_to @se.name, user_path(@se) %> wants to borrow your
             <% @s = Stuff.find_by_id(m.stuff_id) %>
             <% if @s != nil %>
             <%= @s.name %>

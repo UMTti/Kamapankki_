@@ -2,7 +2,7 @@
 
 <div class="col-md-9">
     <% @groups.each do |g| %>
-        <%= link_to g.name, group_path(g), :class=> "btn btn-warning" %> 
+        <%= link_to g.name, group_path(g), :class=> "btn btn-warning", :style => "padding:10px;" %> 
     <% end %>
 </div>
 

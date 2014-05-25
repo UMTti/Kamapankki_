@@ -3,6 +3,14 @@
 email: <%=@user.email %> 
 </div>
 
+</br>
+<% @user.stuffs.each do |s| %>
+
+<%= link_to s.name, stuff_path(s), :class => "btn btn-warning" %> 
+
+<% end %>
+
+</br>
 <% if @user == current_user %>
 <%= link_to 'Edit', edit_user_path(@user) %> 
 <% end %>

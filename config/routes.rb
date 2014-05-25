@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :groups do 
     member do
       post 'join'
+      get 'groupmessage'
     end
   end
 

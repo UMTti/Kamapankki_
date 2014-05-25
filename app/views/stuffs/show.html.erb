@@ -2,6 +2,14 @@
 
 <h1> <%= @stuff.name %> </h1>
 Owner: <%= @stuff.user.name %>
+</br>
+<% if @stuff.name == "car" %>
+CO2 impact factor: 65t
+<% end %>
+
+<% if @stuff.name == "computer " %>
+CO2 impact factor: 78kg
+<% end %>
 
 <div class="box">
 Status: 

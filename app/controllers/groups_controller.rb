@@ -28,6 +28,17 @@ class GroupsController < ApplicationController
   def show
   end
 
+  def groupmessage 
+    @group = Group.find(params[:id])
+    @message = Message.new
+    @message.group = @group
+    @message.sender_id = current_user.id
+    @message.save
+    @group.messages << @message
+    #render 'app/views/messages/form'
+    render :partial => 'messages/form', :formats => :html
+  end
+
   # GET /groups/new
   def new
     @group = Group.new
@@ -86,6 +97,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:name, :user_id, :description)
+      params.require(:group).permit(:name, :user_id, :description, :message_id, :sender_id)
     end
 end
