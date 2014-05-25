@@ -15,7 +15,7 @@ First user joins to groups close his/her, for examble the group of his/her livin
 
 Users can use it everywhere: it's near like in user's own home, he/she just can go to take the item from the member of the group by sending a borrow request and getting an answer to it. 
 
-##Impact
+==Impact
 
 People don't need to buy everything to themselves when they move from childhood home to the own apartment. Also the consumption of natural resources decreases. People will feel more togerthness and create local communities. 
 
