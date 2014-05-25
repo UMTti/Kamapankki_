@@ -1,12 +1,11 @@
-Kamapankki - a place where users can create "common households"
+#Kamapankki - a place where users can create "common households"#
 
 Our target user is a single about 20 years old woman or man student, who lives in the big city. He/She tries to live according to ecologic standards and wants to own as little as possible. His/her hobbies are student activities and different kind of sports like climbing. 
 1. Our main character is using the solution, because he/she:
 
-
-Knows that producing new items consume natural resources often without a real purpose
-Don't want to buy everything by himself, because students haven't much money
-Have many close communities and friends and wants to try exciting things with them
+1. Knows that producing new items consume natural resources often without a real purpose
+2. Don't want to buy everything by himself, because students haven't much money
+3. Have many close communities and friends and wants to try exciting things with them
 
 
 2. First user joins to groups close his/her, for examble the group of his/her living floor in the student apartment building. Then he/she thinks what items he/she have that the others may not have and what they maybe wants to borrow. For example the interesting book related to gamification. When user joins to the group, all his/her items joins also to the group and anyone in the group can send a borrow request. 
