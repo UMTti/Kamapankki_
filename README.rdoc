@@ -19,5 +19,9 @@ Users can use it everywhere: it's near like in user's own home, he/she just can 
 
 People don't need to buy everything to themselves when they move from childhood home to the own apartment. Also the consumption of natural resources decreases. People will feel more togerthness and create local communities. 
 
+===Usage:
+
+This is coded with Ruby On Rails. So install ROR 4, go to the application folder, write rails s in the command line and open localhost:3000. 
+
 
 
