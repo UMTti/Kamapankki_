@@ -12,22 +12,8 @@
  <%= link_to "Write message", groupmessage_group_path(@group), :class=> "btn btn-primary" %> 
 
 </br>
-<% @group.messages.each do |m| %>
-
-<% if m.content != nil && m.content != "" %>
-<div style="background-color: #f0ad4e;width:70%;">
-<%= m.title %>.
-<%= m.content %>
-
-<% @u = User.find_by_id(m.sender_id) %>
-<%= @u.name %> 
-
-</div>
 
 
-<% end %>
-
-<% end %>
 
 <div class="row">
 <div class="col-md-4">
